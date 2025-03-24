@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "${workspaceFolder}/*.cpp",
+                "${workspaceFolder}/countGame.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.out",
                 "-g",
