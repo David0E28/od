@@ -1,7 +1,14 @@
-#include <iostream>
+#include<iostream>
+#include<algorithm>
+#include<sstream>
+#include<vector>
+using namespace std;
 
 int main() {
-    int a = 5;
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    string input;
+    getline(cin, input);
+    cin >> target;
+    stringstream(input);
+    
+
 }
