@@ -20,8 +20,11 @@ int main() {
         return 0;
     }
 
-    vector<vector<int>> v;
+    vector<vector<int>> v(m, vector<int>(3));
 
+    for(int i = 0; i < m; ++i) {
+        cin >> v[i][0] >> v[i][1] >> v[i][2];
+    }
     vector<int> parent(n + 1);
     for(int i = 0; i < n + 1; ++i) {
         parent[i] = i;
