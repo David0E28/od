@@ -102,8 +102,9 @@ int main () {
     for (int i = 0; i < 3; ++i) {
         cout << players[i].second;
         if (i < 2) cout << ",";
+        
     }
-    cout << endl;
+    cout << endl; 
 
     return 0;
 }
