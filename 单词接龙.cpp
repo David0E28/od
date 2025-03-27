@@ -69,7 +69,7 @@ int main() {
             }
         }
     }
-    if(maxlengthIndex == -1) break;
+    if(maxlengthIndex = -1) break;
     lastWord = wordVec[maxlengthIndex].first;
     wordVec[maxlengthIndex].second = 0;
     res +=wordVec[maxlengthIndex].first;
