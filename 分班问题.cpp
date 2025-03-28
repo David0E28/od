@@ -1,4 +1,4 @@
-/* 
+/*
 题目描述
 儿园两个班的小朋友在排队时混在了一起，每位小朋友都知道自己是否与前面一位小朋友同班，请你帮忙把同班的小朋友找出来。
 
@@ -28,3 +28,37 @@
 1 2
 3 4
  */
+
+#include <iostream>
+#include <vector>
+#include <sstream>
+int main()
+{
+    std::string temp;
+    std::vector<std::string> input;
+    std::vector<std::vector<int>> classAB(2, std::vector<int>(0));
+    int isSameClass = 1;
+    while (std::cin >> temp)
+    {
+        input.push_back(temp);
+        if (std::cin.peek() == '\n')
+            break;
+    }
+    for (const auto &item : input)
+    {
+        std::stringstream ss{item};
+        int num;
+        std::string tag;
+        ss >> num >> tag;
+        if (tag == "/N")
+            isSameClass = !isSameClass;
+        classAB[isSameClass].push_back(num);
+    }
+    for (const auto &item : classAB[0])
+        std::cout << item << " ";
+    std::cout << std::endl;
+    for (const auto &item : classAB[1])
+        std::cout << item << " ";
+    std::cout << std::endl;
+    return 0;
+}

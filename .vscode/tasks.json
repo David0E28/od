@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "${workspaceFolder}/countGame.cpp",
+                "${workspaceFolder}/分班问题.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.out",
                 "-g",
