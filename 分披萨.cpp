@@ -51,7 +51,7 @@ int valueSum(int L, int R, vector<int> &pizza, vector<vector<int>>& dp, int N)
     if (L == R)
         dp[L][R] = pizza[L];
     else
-        dp[L][R] = std::max(valueSum((L + 1) % N, R, pizza, dp, N) + pizza[L], valueSum(L, (R + N - 1) % N, pizza, dp, N) + pizza[R]);
+        dp[L][R] = max(valueSum((L + 1) % N, R, pizza, dp, N) + pizza[L], valueSum(L, (R + N - 1) % N, pizza, dp, N) + pizza[R]);
     return dp[L][R];
 }
 int main()
@@ -70,7 +70,7 @@ int main()
     int ans = 0;
     for (int i = 0; i < N; ++i)
     {
-        ans = std::max(ans, valueSum((i + 1) % N, (i + N - 1) % N, pizza, dp, N) + pizza[i]);
+        ans = max(ans, valueSum((i + 1) % N, (i + N - 1) % N, pizza, dp, N) + pizza[i]);
     }
     cout << ans << endl;
 }
